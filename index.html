@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静岡のパーソナルジム NEXT PE | 運動初心者向けの無料体験実施中</title>
+    <meta name="description" content="静岡のパーソナルジム「NEXT PE」は、運動初心者や体力に自信がない方へ向けた安心のトレーニング環境を提供します。まずは無料体験から。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="静岡のパーソナルジム NEXT PE | 運動初心者向けの無料体験実施中">
+    <meta property="og:description" content="運動が苦手な方へ。静岡のパーソナルジム NEXT PE で、まずは無料体験から。初心者向けの本格機材とサポートで安心です。">
+    <meta property="og:type" content="website">
+    <!-- TODO: 後から正式なURLに差し替えてください -->
+    <meta property="og:url" content="https://nextpe.jp/">
+    <!-- TODO: OGP画像の差し替え -->
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=NEXT+PE+OGP">
+    <meta property="og:site_name" content="NEXT PE">
+
+    <style>
+        /* CSS reset & base */
+        :root {
+            --primary-color: #4a90e2; /* 淡いブルー */
+            --primary-color-hover: #357abd;
+            --accent-color: #50c878; /* 淡いグリーン */
+            --accent-color-hover: #3eb564;
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --text-light: #555555;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px 40px;
+            border-radius: 50px;
+            box-shadow: 0 6px 0 var(--accent-color-hover), 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+            text-align: center;
+            position: relative;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            top: 2px;
+            box-shadow: 0 4px 0 var(--accent-color-hover), 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:active {
+            top: 6px;
+            box-shadow: 0 0 0 var(--accent-color-hover), 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 共感セクション */
+        .empathy {
+            background-color: #ffffff;
+        }
+        .empathy-box {
+            background-color: #f7f9fa;
+            border-radius: var(--border-radius);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .empathy-list {
+            list-style: none;
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .empathy-list li {
+            font-size: 18px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            color: var(--text-light);
+        }
+        .empathy-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .empathy-message {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* 選ばれる理由セクション */
+        .reasons {
+            background-color: #f4fbfb;
+        }
+
+        .reason-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .reason-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .reason-card:nth-child(5) {
+                grid-column: span 2;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+        }
+
+        .reason-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .reason-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .reason-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .reason-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            text-align: left;
+            width: 100%;
+        }
+
+        .reason-image {
+            margin-top: 15px;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        /* 体験の流れ */
+        .flow {
+            background-color: #ffffff;
+        }
+        .flow-steps {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .flow-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        .step-content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .step-content p {
+            font-size: 15px;
+            color: var(--text-light);
+        }
+
+        /* 最終CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #e8f5e9 0%, #e0f7fa 100%);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* フッター */
+        .footer {
+            background-color: #f7f9fa;
+            color: #333;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-info {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .footer-info p {
+            margin-bottom: 10px;
+        }
+
+        /* アニメーション用クラス */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 767px) {
+            .hero { padding: 60px 20px; }
+            .hero-title { font-size: 24px; }
+            .hero-subtitle { font-size: 15px; }
+            .cta-button { font-size: 16px; padding: 15px 30px; }
+            h2.section-title { font-size: 22px; }
+            .empathy-list li { font-size: 15px; }
+            .empathy-message { font-size: 18px; }
+            .reason-grid .reason-card:nth-child(5) {
+                grid-column: span 1;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. ヒーローセクション -->
+    <header class="hero">
+        <div class="container fade-in">
+            <!-- TODO: ロゴ画像などがあればここに差し替え -->
+            <!-- <img src="https://via.placeholder.com/200x80.png?text=NEXT+PE+Logo" alt="NEXT PE ロゴ" style="margin: 0 auto 20px; max-width: 200px;"> -->
+
+            <h1 class="hero-title">運動が苦手な方へ。<br>静岡のパーソナルジム NEXT PE で、まずは無料体験から</h1>
+            <p class="hero-subtitle">体力に自信がない方、ジムが初めての方でも安心のサポート体制。</p>
+            <a href="https://nextpe.jp/" class="cta-button">無料体験の詳しい内容・ご予約はこちら</a>
+        </div>
+    </header>
+
+    <!-- 2. 共感セクション -->
+    <section class="section empathy">
+        <div class="container fade-in">
+            <h2 class="section-title">こんなお悩みありませんか？</h2>
+            <div class="empathy-box">
+                <!-- TODO: イメージ画像の差し替え -->
+                <!-- <img src="https://via.placeholder.com/600x400.png?text=Worry+Image" alt="運動に不安を感じている人のイメージ" style="margin: 0 auto 20px; border-radius: 8px; max-width: 100%;"> -->
+
+                <p style="font-size: 16px; color: var(--text-light); font-weight: bold;">「運動が久しぶりで不安…」<br>「ハードなトレーニングをさせられないか心配…」<br>「自分がジムに行って大丈夫か自信がない…」</p>
+
+                <ul class="empathy-list">
+                    <li>周りの目が気になって一般のジムに通いづらい</li>
+                    <li>体力に全く自信がなく、ついていけるか不安</li>
+                    <li>怪我なく安全に、正しいやり方を教わりたい</li>
+                </ul>
+
+                <p class="empathy-message">NEXT PEは、そんな「運動未経験・初心者」の方にこそ<br>安心して通っていただける環境をご用意しています。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 選ばれる理由 -->
+    <section class="section reasons">
+        <div class="container fade-in">
+            <h2 class="section-title">NEXT PEが初心者に選ばれる5つの理由</h2>
+
+            <div class="reason-grid">
+                <!-- 理由1 -->
+                <div class="reason-card">
+                    <div class="reason-icon">🛡️</div>
+                    <h3>初心者こそ「安全・安定」の本格機材を</h3>
+                    <p>多様な種目ができる「オールインワンラック」に加え、圧倒的な安定感の「コンボラック」を完備。機材がグラつかないため、初心者でも怖がらず安全で綺麗なフォームを身につけやすくなります。</p>
+                    <!-- TODO: 機材画像の差し替え -->
+                    <!-- <img src="https://via.placeholder.com/400x300.png?text=Equipment+Image" alt="安定感のあるオールインワンラックとコンボラック" class="reason-image"> -->
+                </div>
+
+                <!-- 理由2 -->
+                <div class="reason-card">
+                    <div class="reason-icon">🏋️</div>
+                    <h3>1kgから始められる「固定式ダンベル」</h3>
+                    <p>可変式特有のグラつきを排除し、あえて1kg〜40kgの固定式ダンベルをご用意しました。運動未経験の方でも、軽い重量から安心してトレーニングに集中できます。</p>
+                    <!-- TODO: ダンベル画像の差し替え -->
+                    <!-- <img src="https://via.placeholder.com/400x300.png?text=Dumbbell+Image" alt="1kgから選べる固定式ダンベル" class="reason-image"> -->
+                </div>
+
+                <!-- 理由3 -->
+                <div class="reason-card">
+                    <div class="reason-icon">💪</div>
+                    <h3>加圧トレーニング対応</h3>
+                    <p>重いウェイトを持たなくても、比較的軽い負荷で効果を感じやすい加圧トレーニングを導入。体力に自信がない方や関節への負担が気になる方にも適したトレーニング方法です。</p>
+                </div>
+
+                <!-- 理由4 -->
+                <div class="reason-card">
+                    <div class="reason-icon">🥤</div>
+                    <h3>プロテイン無料サービス</h3>
+                    <p>トレーニング後には無料でプロテインをご提供。手ぶらで身軽にお越しいただき、運動後の栄養補給までしっかりサポートいたします。</p>
+                </div>
+
+                <!-- 理由5 -->
+                <div class="reason-card">
+                    <div class="reason-icon">🏠</div>
+                    <h3>自主トレ環境の完備</h3>
+                    <p>パーソナルセッションだけでなく、ご自身のペースで無理なく続けられる自主トレ環境も整えています。習ったことを復習しながら、少しずつ運動習慣を身につけていきましょう。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 無料体験の流れ -->
+    <section class="section flow">
+        <div class="container fade-in">
+            <h2 class="section-title">無料体験の簡単な流れ</h2>
+
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>丁寧なカウンセリング</h3>
+                        <p>まずは現在のお悩みや運動歴、目標などをじっくりお伺いします。体力に自信がなくても問題ありません。不安なことは何でもご相談ください。</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>お身体の状態チェック</h3>
+                        <p>姿勢や柔軟性、簡単な動作を通じて、現在のお身体の状態を確認します。無理な動作はお願いしませんのでご安心ください。</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>体験トレーニング</h3>
+                        <p>一人ひとりの体力に合わせた無理のないメニューを体験していただきます。まずは「身体を動かすって気持ちいい」と感じていただくことが目的です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 最終CTA -->
+    <section class="section final-cta">
+        <div class="container fade-in">
+            <p>私たちと一緒に、無理なく少しずつ始めてみませんか？<br>あなたの一歩をお待ちしております。</p>
+            <a href="https://nextpe.jp/" class="cta-button">無料体験の詳しい内容・ご予約はこちら</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <!-- TODO: 住所、電話番号の差し替え -->
+                <p><strong>パーソナルジム NEXT PE</strong></p>
+                <!-- TODO: 正式な住所に差し替え -->
+                <p>〒420-0000 静岡県静岡市〇〇区〇〇 1-2-3</p>
+                <!-- TODO: 正式な電話番号に差し替え -->
+                <p>TEL: 000-000-0000</p>
+            </div>
+            <p style="font-size: 12px; color: #999;">&copy; NEXT PE All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- スムーズスクロール・アニメーション用の最小限のJS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // スクロール時のフェードインアニメーション
+            const faders = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
